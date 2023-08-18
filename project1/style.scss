@@ -89,11 +89,181 @@ a {
             }
         }
 
-        .profile_content{
+        .profile_content {
             // width: 100%;
             text-align: center;
-            height: 240px;
+            // height: 240px;
             background-color: var( --main-color);
+            color: #fff;
+            font-size: 18px;
+            padding: 144px 72px 256px;
+
+            .profile_box {
+                padding: 12px;
+                width: 60%;
+                margin: 0 auto;
+
+                .sub_title {
+                    line-height: 32px;
+                    font-size: 32px;
+                    margin: 0 0 24px;
+                    font-weight: 700;
+                }
+
+                .profile_description {
+                    line-height: 30px;
+                    font-size: 20px;
+                    margin: 0 0 24px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .skills_content {
+            margin-top: -224px;
+            padding: 80px 24px 16px;
+            width: 80%;
+            border-radius: 20px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+
+            ul {
+                display: grid;
+                grid-column: 2 / span 12;
+                grid-template-columns: repeat(12, minmax(auto, 60px));
+
+              li {
+                grid-column-end: span 4;
+
+                .skill_image {
+                    width: 72px;
+                    height: 72px;
+                    background-color: #5BE9B9;
+                    font-size: 45px;
+                    text-align: center;
+                    align-items: center;
+                    line-height: 45px;
+                    border-radius: 50%;
+                    padding: 10px;
+                }
+
+                h5 {
+                    margin:24px 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #141c3a;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #141c3a;
+                    text-align: center;
+                    margin: 0 0 36px;
+                    
+                    span {
+                        color: var( --main-color);
+                    }
+                }
+
+                ul {
+                    display: block;
+                    text-align: center;
+                }
+              }
+            }
+            
+        }
+
+        .projects {
+            padding: 144px 72px;
+
+            .projects_container h4{
+                color: #141c3a;
+                font-size: 32px;
+                font-weight: 700;
+                margin: 0 0 24px;
+                text-align: center;
+            }
+
+            .projects_container p {
+                color: #141c3a;
+                font-size: 24px;
+                margin: 0 0 24px;
+                text-align: center;
+                line-height: 32px;
+            }
+
+            .projects_grid {
+                display: grid;
+                grid-template-columns: 1fr repeat(12, minmax(auto, 100px)) 1fr;
+                grid-column: 1 / span 12;
+                padding: 64px 0;
+                ul {
+                    display: grid;
+                    grid-column: 2 / span 12;
+                grid-template-columns: repeat(12, minmax(auto, 100px));
+
+                    li {
+                        width: 100%;
+                        padding: 15px;
+                        grid-column-end: span 4;
+                        img{
+                            width: 100%;
+                            
+                        }
+                    }
+                    
+                }
+            }
+
+            .dribbble {
+                width: 30rem;
+                margin: 0 auto;
+                padding: 25px 40px;
+                border-radius: 10px;
+                border: var(--main-color) 2px solid;
+                color: var(--main-color);
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .footer {
+        text-align: center;
+        background-color: var(--main-color);
+        padding: 64px 24px;
+
+        a {
+            color: #fff;
+            font-size: 60px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            margin: 32px 0;
+        }
+
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+
+            li {
+                margin: 0 12px;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+
+        .copy_right {
+            font-size: 18px;
         }
     }
 }
