@@ -55,7 +55,14 @@ function postUser() {
     const nameValue = nameInput.value;
     const ageInput = document.getElementById('age');
     const ageValue = ageInput.value;
-    if (!nameValue || !ageValue) return;
+    if (!nameValue || !ageValue) {
+        document.getElementsByClassName('message')[0].innerHTML = 
+        "Name and age are required!";
+        setTimeout(()=>{
+            document.getElementsByClassName('message')[0].innerHTML = '';
+        },2000);
+        return;
+    };
     
     const body = {
         name: nameValue,
