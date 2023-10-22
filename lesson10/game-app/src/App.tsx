@@ -6,6 +6,7 @@ export default function App() {
   return (
     <div className="App"> 
       <Game />
+      <img src='/images/grass.png' alt=''/>
     </div>
   );
 }

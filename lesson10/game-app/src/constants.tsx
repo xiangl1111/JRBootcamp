@@ -1,7 +1,7 @@
 export const cardText ={
     title: "Memory Game",
     btnText: "New Game",
-    winner: "Congratulation! You won!",
+    winner: "Congratulation! You win!",
 }
 
 export const cardImages = [
