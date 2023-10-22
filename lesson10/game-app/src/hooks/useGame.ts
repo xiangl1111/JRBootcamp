@@ -35,12 +35,12 @@ export default function useGame() {
             if(choiceOne.src === choiceTwo.src){
                 setCards((prevCards) => 
                   prevCards.map((card) => 
-                    card.src === choiceOne.src ? {...card, isMatched: true} :card
+                    card.src === choiceOne.src ? {...card, matched: true} :card
                 ));
+                resetTurn()
+            } else {
+                setTimeout(()=> resetTurn(),500)
             }
-            resetTurn()
-        } else {
-            setTimeout(()=> resetTurn(),500)
         }
     }, [choiceOne, choiceTwo]);
 
@@ -48,9 +48,19 @@ export default function useGame() {
         shuffleCards();
     },[])
 
+    useEffect(()=> {
+        const unMatched =cards.filter(card=>card.matched === false);
+        unMatched.length ? setWinner(false) : setWinner(true);
+    },[cards])
+
     return {
         shuffleCards,
         cards,
-        setCards
+        setCards,
+        handleChoice,
+        choiceOne,
+        choiceTwo,
+        disabled,
+        winner
     }
 }

@@ -1,12 +1,13 @@
-import './App.css';
 import Game from './components/Game/Game';
 import './styles/global.scss';
-
-export default function App() {
+import {Provider} from 'react-redux';
+import {store} from '../src/redux/index'
+function App() {
   return (
-    <div className="App"> 
+    <Provider store={store}> 
       <Game />
-      <img src='/images/grass.png' alt=''/>
-    </div>
+    </Provider>
   );
 }
+
+export default App;
