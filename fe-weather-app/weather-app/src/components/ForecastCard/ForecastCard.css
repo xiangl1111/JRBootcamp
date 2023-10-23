@@ -1,0 +1,12 @@
+.forecast_card .day{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.forecast_card .temp {
+    font-size: 30px;
+}
+.forecast_card .desc {
+    text-transform: uppercase;
+    font-size: 14px;
+}

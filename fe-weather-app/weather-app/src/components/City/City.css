@@ -1,0 +1,12 @@
+.city_name {
+    margin: 50px;
+    font-size: 80px;
+}
+.city_name::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5px;
+    background-color: #fff;
+    margin: 20px auto;
+}

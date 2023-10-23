@@ -1,0 +1,23 @@
+.city_weather {
+    padding: 50px 50px 150px 50px;
+}
+
+.city_weather .temp {
+    font-size: 80px;
+}
+
+.city_weather .desc {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.city_weather .sub_title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.city_weather .sub_title_text {
+    font-size: 20px;
+}
