@@ -3,11 +3,11 @@ const openWeatherMapService = require('../services/openWeatherMapService');
 const {query, validationResult} = require('express-validator');
 //view all
 exports.index = async(req,res) =>{
-    const result = validationResult(req);
-    if(result.isEmpty()){
-        return res.send(`Hello,${req.query.city} is required!`)
-    }
-    const data =  await openweathermapService.getWeather()
+    // const result = validationResult(req);
+    // if(result.isEmpty()){
+    //     return res.send(`Hello,${req.query.city} is required!`)
+    // }
+    const data =  await openWeatherMapService.getWeather()
     // console.log(data)
     res.send(data.data)
 }
